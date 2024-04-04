@@ -7,7 +7,6 @@ let jogoComecou = false;
 $(".btn").on("click", function(){
     let escolhaCorUsuario = $(this).attr("id");
     padraoClicadoUsuario.push(escolhaCorUsuario);
-    console.log(padraoClicadoUsuario);
     tocarSom(escolhaCorUsuario);
     animarPressione(escolhaCorUsuario);
     checarResposta(padraoClicadoUsuario.length -1);
@@ -27,7 +26,7 @@ function proximaSequencia() {
 
 function checarResposta(levelAtual) {
     if (padraoJogo[levelAtual] === padraoClicadoUsuario[levelAtual]) {
-      console.log("Sucesso");
+
 
       if (padraoClicadoUsuario.length === padraoJogo.length){
         setTimeout(function () {
@@ -36,7 +35,7 @@ function checarResposta(levelAtual) {
       }
 
     } else {
-      console.log("Errado");
+
       tocarSom("errado");
       $("body").addClass("game-over");
       setTimeout(function(){
