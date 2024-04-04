@@ -47,7 +47,7 @@ function checarResposta(levelAtual) {
 }
 
 function tocarSom(nome){
-    const audio = new Audio("/Simon Game Challenge Starting Files/sounds/" + nome + ".mp3");
+    const audio = new Audio("sounds/" + nome + ".mp3");
     audio.play();
 }
 
